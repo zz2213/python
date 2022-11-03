@@ -8,7 +8,7 @@ import datetime
 def send(url, title, mes):
     sendUrl = "https://api.day.app/" + url + "/" + title + "/" + mes
     requests.get(sendUrl)
-    
+
 
 def func():
     now = datetime.datetime.now()
