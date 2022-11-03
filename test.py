@@ -1,26 +1,14 @@
-# import requests
+import requests
 from threading import Timer
 import datetime
 
-"""
- kw = {"tagId": 9, "memberName": "", "current": 1, "size": 10}
 
-url = "https://api.banksteel.com/gateway/banksteel-riskmanage-bcs/bcs/v2/tags/tagId/member-scores"
- response = requests.post(url, json=kw)
- print(response.json)
-"""
+# ÊâìÂç∞Êó∂Èó¥
 
-"""
-getParam = {
-    "originalIdListString": "4090761,4090759"
-    }
-getUrl = "https://api.banksteel.com/gateway/banksteel-finance-invoice/foreign/input/record/item"
-getResponse = requests.get(getUrl, params=getParam)
-print(getResponse.text)
-"""
-
-# ¥Ú”° ±º‰
-
+def send(url, title, mes):
+    sendUrl = "https://api.day.app/" + url + "/" + title + "/" + mes
+    requests.get(sendUrl)
+    
 
 def func():
     now = datetime.datetime.now()
@@ -33,6 +21,14 @@ def task(s):
     Timer(s, func, ()).start()
 
 
+"""
 task(10)
 now = datetime.datetime.now()
 print(now.strftime("%Y-%m-%d %H:%M:%S"))
+"""
+# ding
+send("RYXFHftgRhq5BsomYwEb5J", "QQ", "hello")
+send("pNoymLM2BzphdPd4qAoc2a", "QQ", "hello")
+
+
+# getVouchersList("08", "cd141686-2664-463b-b345-30a13650fd45")
